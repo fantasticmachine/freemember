@@ -83,7 +83,7 @@ class Freemember_model extends CI_Model
         array_unshift($sql_select, 'm.group_id');
         $custom_fields = $this->member_custom_fields();
         foreach ($custom_fields as $field) {
-            $sql_select[] = "m_field_id_{$field->m_field_id} AS {$field->m_field_name}";
+            $sql_select[] = "m_field_id_{$field->m_field_id} AS `{$field->m_field_name}`";
         }
 
         // build where clause
